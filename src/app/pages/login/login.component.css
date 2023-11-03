@@ -1,0 +1,61 @@
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vw;
+  }
+
+.content {
+  text-align: left;
+  font-family: Calibri, sans-serif;
+}
+
+h2 {
+  font-size: 4.5vw;
+  margin: 0;
+}
+
+h3 {
+  font-size: 2vw;
+  color: gray;
+  margin: 0 0 2vw 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2vw;
+}
+.form-group  app-button{
+  width: 66%;
+  margin-left: 6.5vw;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: black;
+  font-size: 1.2vw;
+  font-weight: bold;
+  font-family: Calibri, sans-serif !important;
+}
+
+
+label {
+  font-weight: bold;
+  font-size: 1.5vw;
+  width: 10vw;
+  font-family: Calibri, sans-serif; /* Применяем шрифт "Calibri" к меткам */
+}
+
+input {
+  flex: 1;
+  padding: 0.75vw;
+  font-size: 1.2vw;
+  font-family: Calibri, sans-serif;
+  font-weight: bold ;
+  border: 0.2vw solid #878787;
+}
+
+

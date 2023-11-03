@@ -1,0 +1,22 @@
+<div class="login-container">
+  <div class="content">
+    <h2>Login Form</h2>
+    <h3>enter login and password for access</h3>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Login</label>
+        <input type="text" id="username" name="username" [(ngModel)]="loginData.username" required
+               placeholder="Your login" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="loginData.password" required
+               placeholder="Your password">
+      </div>
+      <div class="form-group">
+        <app-button [name]="'Login'"></app-button>
+
+      </div>
+    </form>
+  </div>
+</div>

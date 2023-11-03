@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="title">
+    <h2>Sensor table</h2>
+    <a (click)="logout()" class="logout-link">Logout</a>
+  </div>
+  <div class="search" [style.padding-left.vw]="isAdmin ? 7 : 4.5">
+    <input type="text" name="search" class="search-input" [(ngModel)]="search" placeholder="enter text to search" />
+    <div (click)="found()" class="search-button">
+      <img src="../../../assets/img/search.png"/>
+      <label>Search</label>
+    </div>
+  </div>
+  <table class="sensor-table">
+    <thead>
+    <tr>
+      <label *ngIf="isAdmin"></label>
+      <th>Name</th>
+      <th>Model</th>
+      <th>Range</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>Location</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let sensor of getPaginatedSensors()[p]; let i = index">
+      <div class="edit-button" *ngIf="isAdmin" (click)="editSensor(sensor) ">
+        <img src="../../../assets/img/edit.png"/>
+      </div>
+      <td class="name" [tooltip]="sensor.description" [placement]="'bottom'" >{{sensor.name}} </td>
+      <td>{{ sensor.model }}</td>
+      <td>{{ sensor.rangeFrom}}-{{sensor.rangeTo}}</td>
+      <td>{{ sensor.type }}</td>
+      <td>{{ sensor.unit }}</td>
+      <td>{{ sensor.location }}</td>
+      <div class="delete-button" *ngIf="isAdmin" (click)="deleteSensor(sensor)">
+        <img src="../../../assets/img/cancel.png"/>
+      </div>
+    </tr>
+    </tbody>
+  </table>
+<div class ="boot">
+  <button class="add-button" *ngIf="isAdmin" (click)="addSensor()">Add Sensor</button>
+  <div class="boot-right">
+    <div class="pagination">
+      <button (click)="p = p - 1" [disabled]="p === 0">Previous</button>
+      <div *ngFor="let page of getPaginatedSensors(); let i = index">
+        <button (click)="changePage(i)" [ngClass]="{'active': i === p}">{{ i + 1 }}</button>
+      </div>
+      <button (click)="p = p < totalPages - 1 ? p + 1 : p" [disabled]="p === totalPages - 1">Next</button>
+
+    </div>
+  <label class="total">Total: {{ sensors.length }}</label>
+  </div>
+
+</div>
+
+</div>

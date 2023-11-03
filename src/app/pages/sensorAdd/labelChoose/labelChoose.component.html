@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="range">Range</div>
+  <div class="from">From</div>
+
+  <div class="img-container">
+    <input type="number" [(ngModel)]="from" [ngClass]="getFieldClass(fromElement)" (input)="onFromChange($event)" [value]="initialFrom" />
+
+    <div class="image">
+      <img class="up" src="../../../../assets/img/up.png" (click)="incrementFrom()" />
+      <img class="down" src="../../../../assets/img/down.png" (click)="decrementFrom()" />
+    </div>
+  </div>
+  <div class="from">To</div>
+  <div class="img-container">
+    <input type="number" [(ngModel)]="to" [ngClass]="getFieldClass(toElement)" (input)="onToChange($event)"[value]="initialTo" />
+    <div class="image">
+      <img class="up" src="../../../../assets/img/up.png" (click)="incrementTo()" />
+      <img class="down" src="../../../../assets/img/down.png" (click)="decrementTo()" />
+    </div>
+  </div>
+</div>

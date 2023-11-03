@@ -1,0 +1,14 @@
+<div class="container">
+  <div>{{ name }} *</div>
+  <div class="img-container">
+  <select [(ngModel)]="selectedValue" [ngClass]="getFieldClass(nameElement)" (input)="onChange($event)" [value]="initialValue" >
+    <option value="Selected" disabled hidden>Select</option>
+    <option *ngFor="let value of values" [value]="value">{{ value }}  </option>
+  </select>
+  <div class="image">
+    <img class="up" src="../../../../assets/img/up.png" (click)="upClick()">
+    <img class="down" src="../../../../assets/img/down.png" (click)="downClick()" >
+  </div>
+  </div>
+</div>
+

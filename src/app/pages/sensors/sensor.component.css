@@ -1,0 +1,189 @@
+.container {
+  text-align: center;
+  max-width: 70vw;
+  margin: 0 auto;
+  position: relative;
+
+}
+
+.title {
+  display: flex;
+  margin-bottom: 6vw;
+  padding: 0 7vw 0 7vw;
+}
+
+h2 {
+  font-size: 2vw;
+  margin: 0 0;
+}
+
+.logout-link {
+  color: blue;
+  text-decoration: underline;
+  top: 0;
+  right: 0;
+  margin: 0 0 0 auto;
+  cursor: pointer;
+}
+
+
+.search {
+  display: flex;
+  margin-bottom: 1.3vw;
+  padding: 0 7vw 0 7vw;
+}
+
+.search-input {
+  width: 14vw;
+  border: 0.1vw solid black;
+  padding: 0.2vw 0.3vw 0.2vw 0.3vw;
+}
+
+.search-button {
+  cursor: pointer;
+  background-color: #d9d9d9;
+  display: flex;
+  margin-left: 0.4vw;
+  border: 0.1vw solid black;
+  border-radius: 1vw;
+  padding: 0.2vw 0.7vw 0.2vw 0.2vw;
+}
+input[type="text"]::placeholder{
+  color: black;
+  font-size: 1vw;
+  font-family: Calibri, sans-serif !important;
+}
+.search-button img {
+  height: 1.2vw;
+  width: 1.2vw;
+  margin-right: 0.5vw;
+}
+
+.search-button label {
+  cursor: pointer;
+  margin: auto 0 auto 0;
+
+
+  /* шрифт */
+}
+.sensor-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: 4.5vw;
+}
+
+.sensor-table th,
+.sensor-table td {
+  font-family: Calibri, sans-serif;
+  border: 0.1vw solid #0e0e0e;
+  padding: 0.5vw;
+  text-align: center;
+  font-size: 1.2vw;
+
+}
+.name{
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.sensor-table td {
+  font-family: Calibri, sans-serif;
+  font-size: 1.1vw;
+}
+.sensor-table th {
+  font-family: Calibri, sans-serif;
+  font-weight: bold ;
+  font-size: 1.5vw;
+}
+.sensor-table sr {
+  align-items: center;
+}
+
+.edit-button, .delete-button {
+  background-color: #d9d9d9;
+  border: 0.1vw solid black;
+  border-radius: 0.2vw;
+  max-height: 1.4vw;
+  max-width: 1.4vw;
+}
+
+.delete-button {
+  margin-left: 1.2vw;
+}
+
+.edit-button img, .delete-button img {
+  cursor: pointer;
+  height: 1.2vw;
+  width: 1.2vw;
+  margin: 0.1vw 0.1vw 0.1vw 0.1vw;
+}
+
+
+.boot{
+  display: flex;
+  margin: 1.2vw 0 0 7vw;
+}
+
+.add-button {
+  font-family: Calibri bold, sans-serif;
+  font-weight: 700;
+  padding: -0.25vw;
+  width: 10vw;
+  height: 2.3vw;
+  font-size: 1vw;
+  background-color: #d9d9d9; /* Более светлый фон */
+  color: #3d3d3d;
+  border: 0.2vw solid #878787;
+  cursor: pointer;
+  border-radius: 0.5vw;
+  box-shadow: inset 0 -0.25vw #acacac;
+}
+
+.add-button:active {
+  box-shadow: none;
+  padding: 0;
+  height: 2.05vw;
+  margin-top: 0.25vw;
+}
+
+
+.boot-right{
+  display: flex;
+  margin: 0 0 0 auto;
+}
+
+.pagination{
+  display: flex;
+}
+
+.pagination button, .pagination div {
+  border: 0.1vw solid black;
+  background-color: #d9d9d9;
+  max-height: 2.3vw;
+  margin-right: 1vw;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  border: #acacac;
+  cursor: auto;
+
+}
+
+.pagination div button {
+  cursor: pointer;
+  border: none;
+  height: 2.1vw;
+  margin-right: 0;
+}
+
+.pagination div button.active {
+  text-decoration: underline;
+}
+
+.total{
+  font-size: 1.5vw;
+  font-family: Calibri, sans-serif;
+  font-weight: bold ;
+}
+

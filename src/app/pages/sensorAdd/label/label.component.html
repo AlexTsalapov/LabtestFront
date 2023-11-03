@@ -1,0 +1,10 @@
+<div class="form">
+  <div class="form-name">{{ name }}</div>
+  <input class="form-input"
+    [ngClass]="getFieldClass(nameElement)"
+    type="text"
+    id="name"
+    name="type" [value]="initialValue"
+    [placeholder]="holder"
+    (input)="onInputChange($event)">
+</div>

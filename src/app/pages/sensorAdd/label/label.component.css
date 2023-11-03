@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  margin-bottom: 0.5vw;
+
+
+}
+.form-input::-webkit-input-placeholder {color:black; font-size: 0.9vw }
+.form-name {
+
+  width: 5vw;
+  margin-right: 3vw;
+  text-align: right;
+}
+
+.form-input {
+  border: 0.17vw solid #878787;
+  font-size: 0.9vw;
+  padding: 0.3vw;
+  width: 19.7vw;
+  height: 1.5vw;
+}
+
+.invalid {
+  border: 0.17vw solid red;
+  /* Дополнительные стили для класса 'invalid' */
+}
+

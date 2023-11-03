@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="title">
+    <h2>Add/edit</h2>
+  </div>
+
+  <div class="form-group">
+    <app-label [name]="'Name *'" [initialValue]="SensorData.name" [holder]="'Name'" [nameElement]="'name'"  [fieldStates]=fieldStates  [ngClass]="getFieldClass('name')" (valueChange)="onNameChange($event)"></app-label>
+
+    <app-label [name]="'Model *'" [initialValue]="SensorData.model" [holder]="'Model'" [nameElement]="'model'" [fieldStates]=fieldStates (valueChange)="onModelChange($event)"></app-label>
+    <app-label-choose
+      [to]=SensorData.rangeTo
+      [initialTo]="SensorData.rangeTo"
+      [initialFrom]="SensorData.rangeFrom"
+      (toChange)="onToChange($event)"
+      [from]=SensorData.rangeFrom
+      [fromElement]="'rangeFrom'"
+      [toElement]="'rangeTo'"
+      [fieldStates]=fieldStates
+      (fromChange)="onFromChange($event)"
+    ></app-label-choose>
+
+    <app-label-db-choose [name]="'Type'" [nameElement]="'type'" [initialValue]="SensorData.type" [fieldStates]=fieldStates (selectedChange)="onTypeChange($event)" [values]=type ></app-label-db-choose>
+    <app-label-db-choose [name]="'Unit'"  [nameElement]="'unit'" [initialValue]="SensorData.unit" [fieldStates]=fieldStates [ngClass]="getFieldClass('unit')" (selectedChange)="onUnitChange($event)" [values]=unit></app-label-db-choose>
+
+
+    <app-label [name]="'Location'" [holder]="'location'" [initialValue]="SensorData.location" (valueChange)="onLocationChange($event)"></app-label>
+
+    <div class="form">
+      <div class="form-name">Description</div>
+      <textarea class="form-input" id="description" name="description" [value]="SensorData.description" cols="30" rows="10" [(ngModel)]="SensorData.description" placeholder="Here is some text input.
+
+
+Here is another paragraph of input."></textarea>
+    </div>
+
+
+  </div>
+  <div class="buttons">
+    <app-button class="save" [name]="'Save'" (click)=save()></app-button>
+    <app-button [name]="'Cansel'" (click)=cansel()></app-button>
+  </div>
+</div>
